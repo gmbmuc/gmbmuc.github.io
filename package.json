@@ -19,7 +19,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel --dist-dir dist/develop",
-    "build": "parcel build --dist-dir dist/public"
+    "build": "rimraf public && parcel build --dist-dir public"
   },
   "browserslists": "last 2 versions",
   "dependencies": {
@@ -33,6 +33,7 @@
     "@types/mustache": "^4.2.5",
     "parcel": "^2.10.3",
     "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
   },
   "packageManager": "yarn@4.0.1"
