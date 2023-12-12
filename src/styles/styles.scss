@@ -2,10 +2,11 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Gruen';
-  src: url("/src/font/gruen.ttf");
-}
+//@font-face {
+//  font-family: 'Gruen';
+//  src: url("/src/font/gruen.ttf");
+//  font-display: swap;
+//}
 
 body {
   padding: 0;
@@ -20,7 +21,7 @@ body {
   --bg-footer: #0a321e;
 
   --font-family: Verdana, sans-serif;
-  --font-family-title: Gruen, Verdana, sans-serif;
+  --font-family-title: Helvetica, sans-serif;
 
   --gap-l: 48px;
   --gap-m: 32px;
@@ -76,11 +77,17 @@ header {
   }
 
   .title {
-    font-size: 30px;
+    font-size: 24px;
     font-family: var(--font-family-title);
+    letter-spacing: 0;
     line-height: 48px;
+    font-weight: 700;
 
     .mobile & {
+      font-size: 16px;
+    }
+
+    .tablet & {
       font-size: 20px;
     }
   }
@@ -156,7 +163,7 @@ footer {
 }
 
 h1 {
-  font-family: Gruen, Verdana, sans-serif;
+  font-family: var(--font-family-title);
 }
 
 h1 {

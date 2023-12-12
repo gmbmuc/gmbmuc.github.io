@@ -13,27 +13,27 @@ export class MainView extends PageView {
       members: [
         {
           name: 'Tina Garway',
-          image: new URL('/src/img/members/Tina-Garway-Migrationsbeirat.jpg', import.meta.url).toString(),
+          image: new URL('/src/img/members/Tina-Garway-Migrationsbeirat.webp', import.meta.url).toString(),
           link: `${urlLanguage}/person/tina-garway`,
         },
         {
           name: 'Bakir Lemes',
-          image: new URL('/src/img/members/Bakir-Lemes-Migrationsbeirat.jpg', import.meta.url).toString(),
+          image: new URL('/src/img/members/Bakir-Lemes-Migrationsbeirat.webp', import.meta.url).toString(),
           link: `${urlLanguage}/person/bakir-lemes`,
         },
         {
           name: 'Matu Mbala',
-          image: new URL('/src/img/members/Matu-Mbala-Migrationsbeirat.jpg', import.meta.url).toString(),
+          image: new URL('/src/img/members/Matu-Mbala-Migrationsbeirat.webp', import.meta.url).toString(),
           link: `${urlLanguage}/person/matu-mbala`,
         },
         {
           name: 'Carmen Romano',
-          image: new URL('/src/img/members/Carmen-Romano-Migrationsbeirat.jpg', import.meta.url).toString(),
+          image: new URL('/src/img/members/Carmen-Romano-Migrationsbeirat.webp', import.meta.url).toString(),
           link: `${urlLanguage}/person/carmen-romano`,
         },
         {
           name: 'Emily Wachelka',
-          image: new URL('/src/img/members/Emily-Wachelka-Migrationsbeirat.jpg', import.meta.url).toString(),
+          image: new URL('/src/img/members/Emily-Wachelka-Migrationsbeirat.webp', import.meta.url).toString(),
           link: `${urlLanguage}/person/emily-wachelka`,
         },
       ],

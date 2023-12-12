@@ -30,23 +30,23 @@ interface MembersBase {
 export const membersBase: Record<Members, MembersBase> = {
   emily: {
     name: 'Emily Wachelka',
-    image: new URL('/src/img/members/Emily-Wachelka-Migrationsbeirat.jpg', import.meta.url).toString(),
+    image: new URL('/src/img/members/Emily-Wachelka-Migrationsbeirat.webp', import.meta.url).toString(),
   },
   tina: {
     name: 'Tina Garway',
-    image: new URL('/src/img/members/Tina-Garway-Migrationsbeirat.jpg', import.meta.url).toString(),
+    image: new URL('/src/img/members/Tina-Garway-Migrationsbeirat.webp', import.meta.url).toString(),
   },
   matu: {
     name: 'Matu Mbala',
-    image: new URL('/src/img/members/Matu-Mbala-Migrationsbeirat.jpg', import.meta.url).toString(),
+    image: new URL('/src/img/members/Matu-Mbala-Migrationsbeirat.webp', import.meta.url).toString(),
   },
   carmen: {
     name: 'Carmen Romano',
-    image: new URL('/src/img/members/Carmen-Romano-Migrationsbeirat.jpg', import.meta.url).toString(),
+    image: new URL('/src/img/members/Carmen-Romano-Migrationsbeirat.webp', import.meta.url).toString(),
   },
   bakir: {
     name: 'Bakir Lemes',
-    image: new URL('/src/img/members/Bakir-Lemes-Migrationsbeirat.jpg', import.meta.url).toString(),
+    image: new URL('/src/img/members/Bakir-Lemes-Migrationsbeirat.webp', import.meta.url).toString(),
   },
 };
 
