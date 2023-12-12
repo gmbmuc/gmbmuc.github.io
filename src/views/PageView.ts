@@ -63,9 +63,10 @@ export class PageView {
 
   private applyLayout() {
     const w = window.innerWidth;
-    document.body.classList.toggle('mobile', w <= 480);
-    document.body.classList.toggle('tablet', w > 480 && w <= 768);
-    document.body.classList.toggle('desktop', w > 768);
+    document.body.classList.toggle('xs', w < 375);
+    document.body.classList.toggle('mobile', w >= 375 && w < 480);
+    document.body.classList.toggle('tablet', w >= 480 && w < 768);
+    document.body.classList.toggle('desktop', w >= 768);
   }
 
   private setTitle(title: string) {
