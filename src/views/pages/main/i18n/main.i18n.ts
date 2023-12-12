@@ -8,7 +8,8 @@ export const pageI18n: PageI18n = {
     page: {
       head: {
         title: '',
-        description: '',
+        description:
+          'Der Migrationsbeirat ist die Interessenvertretung der Münchner*innen mit Migrationsgeschichte. Seine Aufgabe ist es, den Stadtrat und die Verwaltung in allen Fragen, die die ausländische Bevölkerung in München vertreten, zu beraten.',
       },
     },
   },
@@ -17,7 +18,8 @@ export const pageI18n: PageI18n = {
     page: {
       head: {
         title: '',
-        description: '',
+        description:
+          'The Migration Advisory Board represents the interests of Munich residents with a migration history. His job is to advise the city council and the administration on all issues relating to the foreign population in Munich.',
       },
     },
   },
