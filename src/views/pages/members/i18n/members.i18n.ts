@@ -64,7 +64,7 @@ export const membersI18n: MembersI18n = {
     emily: {
       head: {
         title: 'Emily Wachelka',
-        description: '',
+        description: 'Stimmberechtigtes Mitglied im Ausschuss 1 für Bildung, Erziehung, Kinder und Jugend.',
       },
       info: {
         origin: 'USA',
@@ -88,7 +88,8 @@ export const membersI18n: MembersI18n = {
     tina: {
       head: {
         title: 'Tina Garway',
-        description: '',
+        description:
+          'Sprecherin des Ausschusses für Aufenthalts- und Zuwanderungsrecht mit Rassismus, Diskriminierung und Flüchtlingspolitik und somit Mitglied des Erweiterten Vorstandes.',
       },
       info: {
         languages: 'Englisch, Italienisch, Deutsch, Französisch',
@@ -110,14 +111,15 @@ export const membersI18n: MembersI18n = {
     carmen: {
       head: {
         title: 'Carmen Romano',
-        description: '',
+        description:
+          'Mitglied im Ausschuss für Zuschussvergaben und Ausschuss 4 (Ausschuss für Aufenthalts- und Zuwanderungsrecht mit Rassismus,Diskriminierung und Flüchtlingspolitik).',
       },
       info: {
         languages: 'Italienisch, Deutsch, Englisch, ein bisschen Spanisch',
         origin: 'Italien',
         functions: {
           list: [
-            'Mitglied im Ausschuss für Zuschüssvergaben und Ausschuss 4 (Ausschuss für Aufenthalts- und Zuwanderungsrecht mit Rassismus,Diskriminierung und Flüchtlingspolitik)',
+            'Mitglied im Ausschuss für Zuschussvergaben und Ausschuss 4 (Ausschuss für Aufenthalts- und Zuwanderungsrecht mit Rassismus,Diskriminierung und Flüchtlingspolitik)',
             'Leiterin der Arbeitsgruppe „Diskriminierung auf dem Wohnungsmarkt“',
           ],
         },
@@ -132,7 +134,8 @@ export const membersI18n: MembersI18n = {
     bakir: {
       head: {
         title: 'Bakir Lemes',
-        description: '',
+        description:
+          'Bakir studiert Politikwissenschaften an der TU München. Er arbeitet bei PwC und ist Mitglied des Europäischen Jugendparlaments. Er ist Sprecher des AK für Migration und Flucht der Grünen München und Ortsvertreter der Grünen Jugend München Mitte / West.  Seit 2017 ist München seine Heimat.',
       },
       info: {
         about:
@@ -151,7 +154,8 @@ export const membersI18n: MembersI18n = {
     matu: {
       head: {
         title: 'Matu Mbala',
-        description: '',
+        description:
+          'Matu arbeitet für die Landeshauptstadt München, Sozialreferat, und ist Mitglied im Bezirksausschuss Schwabing West. Stadtplanung, Umwelt, Wirtschaft, Sport und Freizeit sind seine Interessensgebiete.',
       },
       info: {
         about:

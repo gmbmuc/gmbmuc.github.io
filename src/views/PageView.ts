@@ -95,11 +95,11 @@ export class PageView {
     const titleElement = document.head.querySelector('title');
     if (titleElement) {
       const mainTitle = i18n[this.getLanguage()].title;
-      const pageTitle = title ? `${title} ☀️${mainTitle}` : mainTitle;
+      const pageTitle = title ? `${title} :: ${mainTitle}` : mainTitle;
       titleElement.innerHTML = pageTitle;
 
       const ogTitleElement = document.head.querySelector('meta[property="og:title"]');
-      ogTitleElement?.setAttribute('content', pageTitle);
+      ogTitleElement?.setAttribute('content', pageTitle.replace('::', '☀'));
     }
   }
 
