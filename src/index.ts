@@ -1,7 +1,8 @@
-import { MainView } from './views/pages/main/main';
 import { MembersView } from './views/pages/members/members';
 import { Members } from './views/pages/members/i18n/members.i18n';
 import { ImprintView } from './views/pages/imprint/imprint';
+import { ErrorView } from './views/pages/404/404';
+import { MainView } from './views/pages/main/main';
 
 const getRoute = () => {
   const { pathname } = window.location;
@@ -35,8 +36,12 @@ const getRoute = () => {
       case '/imprint':
         view = new ImprintView();
         break;
-      default:
+      case '/':
+      case '':
         view = new MainView();
+        break;
+      default:
+        view = new ErrorView();
         break;
     }
 

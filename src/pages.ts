@@ -1,16 +1,23 @@
 import { existsSync, mkdirSync, copyFileSync } from 'fs';
-import { join, basename } from 'path';
+import { join } from 'path';
 
-const copyIndex = (relativeDestinationFolder: string) => {
+const copyIndex = (page: string) => {
   const indexFile = join(__dirname, '../docs/index.html');
-  const destinationFolder = join(__dirname, `../docs/${relativeDestinationFolder}`);
-  const destinationFile = join(destinationFolder, basename(indexFile));
+  const pathArray = page.split('/');
+  if (pathArray.length === 1) {
+    copyFileSync(indexFile, join(__dirname, `../docs/${pathArray[0]}.html`));
+  } else {
+    const fileName = `${pathArray[pathArray.length - 1]}.html`;
+    const filePath = pathArray.slice(0, pathArray.length - 1).join('/');
+    const destinationFolder = join(__dirname, `../docs/${filePath}`);
+    const destinationFile = join(destinationFolder, fileName);
 
-  if (!existsSync(destinationFolder)) {
-    mkdirSync(destinationFolder, { recursive: true });
+    if (!existsSync(destinationFolder)) {
+      mkdirSync(destinationFolder, { recursive: true });
+    }
+
+    copyFileSync(indexFile, destinationFile);
   }
-
-  copyFileSync(indexFile, destinationFile);
 };
 
 const pages = [
@@ -20,9 +27,8 @@ const pages = [
   'person/bakir-lemes',
   'person/tina-garway',
   'impressum',
+  '404',
 ];
-
-copyFileSync(join(__dirname, '../docs/index.html'), join(__dirname, '../docs/404.html'));
 
 pages.forEach((page) => {
   copyIndex(page);

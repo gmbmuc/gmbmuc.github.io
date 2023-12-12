@@ -19,8 +19,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel --dist-dir dist/develop",
-    "build": "yarn build:website && yarn build:pages",
-    "build:website": "rimraf docs && parcel build --dist-dir docs",
+    "clean": "rimraf .parcel-cache && rimraf docs",
+    "build": "yarn clean && yarn build:website && yarn build:pages",
+    "build:website": "parcel build --dist-dir docs",
     "build:pages": "ts-node --project tsconfig.pages.json src/pages.ts"
   },
   "browserslists": "last 2 versions",
