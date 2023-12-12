@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "types": ["node", "./src/types/global.d.ts"]
+  },
+  "include": ["src/pages.ts", "src/types/global.d.ts"]
+}
