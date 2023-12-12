@@ -1,0 +1,47 @@
+{{#main}}
+
+  <h1>{{name}}</h1>
+
+  <img src="{{image}}" alt="{{name}}" class="member" />
+
+
+  {{#info}}
+    {{#languages}}
+      <h2>{{i18n.languages}}:</h2>
+      {{languages}}
+    {{/languages}}
+
+    {{#origin}}
+      <h2>{{i18n.origin}}:</h2>
+      {{origin}}
+    {{/origin}}
+
+    {{#functions}}
+      <h2>{{i18n.functions}}:</h2>
+      <ul>
+        {{#list}}
+          <li>{{.}}</li>
+        {{/list}}
+      </ul>
+    {{/functions}}
+
+    {{#focusOfWork}}
+      <h2>{{i18n.focusOfWork}}:</h2>
+      <ul>
+        {{#list}}
+          <li>{{.}}</li>
+        {{/list}}
+      </ul>
+    {{/focusOfWork}}
+
+    {{#responsibilities}}
+      <h2>{{i18n.responsibilities}}:</h2>
+      <ul>
+        {{#list}}
+          <li>{{.}}</li>
+        {{/list}}
+      </ul>
+    {{/responsibilities}}
+  {{/info}}
+{{/main}}
+

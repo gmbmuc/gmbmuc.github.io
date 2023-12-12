@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Compile to ES6 (modern browsers support)
+    "module": "ES2020", // Use ES2020 modules
+    "lib": ["DOM", "ES6", "DOM.Iterable", "ScriptHost"], // Libraries for DOM and JavaScript runtime
+    "outDir": "dist", // Output directory for compiled files
+    "rootDir": "./src", // Root directory of your source files
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "moduleResolution": "node", // Resolve modules using Node.js style
+    "forceConsistentCasingInFileNames": true, // Ensure case consistency in file names
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value
+    "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "removeComments": false, // Do not remove comments - useful for documentation
+    "resolveJsonModule": true,
+    "sourceMap": true, // Generate source map files for debugging
+    "declaration": true, // Generates corresponding '.d.ts' file.
+    "jsx": "react", // Support JSX in .tsx files
+    "experimentalDecorators": true, // Enables experimental support for ES decorators
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "types": ["node", "./src/types"]
+  },
+  "include": ["src/**/*"], // Include all files in the src folder
+  "exclude": [
+    "./node_modules", "dist"] // Exclude node_modules and dist folders
+}

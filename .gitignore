@@ -1,0 +1,16 @@
+# IDE
+.idea
+.DS_Store
+
+# ENV
+.env
+
+# BUILDER
+.parcel-cache
+node_modules
+dist
+
+# yarn
+.yarn/cache
+.yarn/install-state.gz
+

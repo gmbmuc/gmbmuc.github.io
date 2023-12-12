@@ -1,0 +1,39 @@
+{
+  "name": "gruennaher-migrations-beirat.de",
+  "version": "1.0.0",
+  "description": "Grünnaher Migrationsbeirat",
+  "private": true,
+  "source": "src/index.html",
+  "keywords": [
+    "grüne",
+    "grünnaher",
+    "grünnaher",
+    "migrationsbeirat"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmbmuc/gmbmuc.github.io.git"
+  },
+  "license": "",
+  "author": "Emily Wachelka",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --dist-dir dist/develop",
+    "build": "parcel build --dist-dir dist/public"
+  },
+  "browserslists": "last 2 versions",
+  "dependencies": {
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.10.3",
+    "@parcel/transformer-inline-string": "2.10.3",
+    "@parcel/transformer-sass": "2.10.3",
+    "@parcel/transformer-webmanifest": "2.10.3",
+    "@types/mustache": "^4.2.5",
+    "parcel": "^2.10.3",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.0.1"
+}
