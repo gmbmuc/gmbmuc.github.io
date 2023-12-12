@@ -23,7 +23,7 @@ export class PageView {
         links: {
           instagram: 'https://instagram.com/gruennahes_vielfaltsbuendnis?igshid=NGVhN2U2NjQ0Yg==',
           facebook: 'https://www.facebook.com/profile.php?id=100089455185993',
-          mailto: 'info@gruener-migrations-beirat.de',
+          mailto: 'info@gmbmuc.de',
           imprint: `${getUrlLanguage()}/impressum`,
           home: `${getUrlLanguage()}/`,
         },

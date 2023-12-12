@@ -16,6 +16,10 @@ body {
   padding: 0;
   margin: 0;
 
+  display: flex;
+  flex-direction: column;
+
+
   --color-link: darkolivegreen;
   --color-link-hover: #e6007e;
   --color-link-header: #ffffff;
@@ -90,9 +94,19 @@ a {
 
 header {
   position: sticky;
+  display: flex;
   top: -1px;
-  padding: var(--gap-s) var(--gap-l);
+  padding: 0 var(--gap-m) var(--gap-l) var(--gap-m);
   background-color: var(--bg-header);
+  padding-top: var(--gap-s);
+  padding-bottom: var(--gap-s);
+  justify-content: center;
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 var(--gap-s);
+  }
 
   &.pinned {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
@@ -132,10 +146,11 @@ main {
   background-color: #fff;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   padding: var(--gap-m);
-  margin: var(--gap-m);
-  margin-top: var(--gap-xs);
-  min-height: 50vh;
+  margin: 0 var(--gap-m) var(--gap-m) var(--gap-m);
+  min-height: 60vh;
   border-radius: var(--gap-xs);
+  max-width: 1024px;
+  align-self: center;
 }
 
 .intro {
@@ -181,6 +196,7 @@ footer {
   .social {
     background-color: #fe0;
     width: 100%;
+    margin: 0;
     padding: var(--gap-sm);
     list-style: none;
     display: flex;
