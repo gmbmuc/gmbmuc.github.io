@@ -34,7 +34,13 @@ export class PageView {
 
   attachObservers() {
     const stickyObserver = new IntersectionObserver(
-      ([e]) => e.target.classList.toggle('pinned', e.intersectionRatio < 1),
+      ([e]) => {
+        const moved = e.intersectionRatio < 1;
+        e.target.classList.toggle('pinned', moved);
+        if (moved) {
+          this.loadImages();
+        }
+      },
       { threshold: [1] },
     );
 
@@ -42,6 +48,16 @@ export class PageView {
     if (header) {
       stickyObserver.observe(header);
     }
+  }
+
+  private loadImages() {
+    document.querySelectorAll('img[src=""]').forEach((img) => {
+      const src = (img as HTMLImageElement).dataset.src;
+      if (src) {
+        img.setAttribute('src', src);
+        (img as HTMLImageElement).style.display = 'block';
+      }
+    });
   }
 
   attachListeners() {
@@ -62,11 +78,17 @@ export class PageView {
   }
 
   private applyLayout() {
+    const h = window.innerHeight;
     const w = window.innerWidth;
+
     document.body.classList.toggle('xs', w < 375);
     document.body.classList.toggle('mobile', w >= 375 && w < 480);
     document.body.classList.toggle('tablet', w >= 480 && w < 768);
     document.body.classList.toggle('desktop', w >= 768);
+
+    if (h > 1024) {
+      this.loadImages();
+    }
   }
 
   private setTitle(title: string) {
