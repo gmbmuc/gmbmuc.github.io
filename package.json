@@ -19,7 +19,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel --dist-dir dist/develop",
-    "build": "rimraf public && parcel build --dist-dir public"
+    "build": "rimraf docs && parcel build --dist-dir docs"
   },
   "browserslists": "last 2 versions",
   "dependencies": {
