@@ -81,14 +81,17 @@ article {
 
     li {
       position: relative;
-      padding: var(--gap-xxs) 0 var(--gap-xxs) var(--gap-m);
+      padding-left: 24px;
+      padding-bottom: var(--gap-xs);
+      padding-top: var(--gap-xs);
+
       &:before {
         position: absolute;
         display: block;
         width: 14px;
         height: 14px;
-        top: 5px;
         left: 0;
+        margin-top: 3.5px;
         content: ' ';
         background-image: url("/src/img/gruener-migrationsbeirat-muenchen.svg");
         background-size: contain;
