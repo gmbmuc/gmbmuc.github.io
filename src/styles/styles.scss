@@ -73,9 +73,31 @@ body {
   font-family: var(--font-family);
 }
 
-li {
-  padding: var(--gap-xxs);
+article {
+  > ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: var(--gap-s);
+
+    li {
+      position: relative;
+      padding: var(--gap-xxs) 0 var(--gap-xxs) var(--gap-m);
+      &:before {
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        top: 5px;
+        left: 0;
+        content: ' ';
+        background-image: url("/src/img/gruener-migrationsbeirat-muenchen.svg");
+        background-size: contain;
+      }
+    }
+  }
 }
+
+
 
 a {
   text-decoration: none;
