@@ -91,11 +91,15 @@ export class PageView {
     }
   }
 
-  private setTitle(title: string) {
-    const element = document.head.querySelector('title');
-    if (element) {
+  private setTitle(title?: string) {
+    const titleElement = document.head.querySelector('title');
+    if (titleElement) {
       const mainTitle = i18n[this.getLanguage()].title;
-      element.innerHTML = title ? `${title} ☀️${mainTitle}` : mainTitle;
+      const pageTitle = title ? `${title} ☀️${mainTitle}` : mainTitle;
+      titleElement.innerHTML = pageTitle;
+
+      const ogTitleElement = document.head.querySelector('meta[property="og:title"]');
+      ogTitleElement?.setAttribute('content', pageTitle);
     }
   }
 
@@ -106,11 +110,24 @@ export class PageView {
     }
   }
 
+  private setUrl(url?: string) {
+    const element = document.head.querySelector('meta[property="og:url"]');
+    element?.setAttribute('content', url || document.location.href);
+  }
+
+  private setImage(url?: string) {
+    const element = document.head.querySelector('meta[property="og:image"]');
+    const mainImageUrl = new URL('/src/img/migrationsbeirat.jpg', import.meta.url).toString();
+    element?.setAttribute('content', url || mainImageUrl);
+  }
+
   async render() {
     const { template, page } = this.data;
 
     this.setTitle(page.head.title);
     this.setDescription(page.head.description);
+    this.setUrl(page.head.url);
+    this.setImage(page.head.image);
 
     document.body.innerHTML = Mustache.render(pageTemplate, page, partials);
     document.body.querySelectorAll('main').forEach((element) => {

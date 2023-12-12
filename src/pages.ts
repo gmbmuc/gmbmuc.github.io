@@ -30,6 +30,8 @@ const pages = [
   '404',
 ];
 
+copyFileSync(join(__dirname, 'img/migrationsbeirat.jpg'), join(__dirname, '../docs/migrationsbeirat-muenchen.jpg'));
+
 pages.forEach((page) => {
   copyIndex(page);
 });

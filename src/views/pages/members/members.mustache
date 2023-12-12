@@ -5,6 +5,10 @@
   <img src="{{image}}" alt="{{name}}" class="member bordered" />
 
   {{#info}}
+    {{#about}}
+      <p class="about">{{about}}</p>
+    {{/about}}
+
     {{#languages}}
       <h2>{{i18n.languages}}:</h2>
       {{languages}}

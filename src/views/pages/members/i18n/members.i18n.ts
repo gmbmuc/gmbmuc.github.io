@@ -6,6 +6,7 @@ interface Member {
     description: string;
   };
   info: {
+    about?: string;
     languages?: string;
     origin?: string;
     functions?: {
@@ -25,28 +26,34 @@ export type Members = 'emily' | 'tina' | 'carmen' | 'bakir' | 'matu';
 interface MembersBase {
   name: string;
   image: string;
+  ogImage: string;
 }
 
 export const membersBase: Record<Members, MembersBase> = {
   emily: {
     name: 'Emily Wachelka',
     image: new URL('/src/img/members/Emily-Wachelka-Migrationsbeirat.webp', import.meta.url).toString(),
+    ogImage: new URL('/src/img/members/Emily-Wachelka-Migrationsbeirat.jpg', import.meta.url).toString(),
   },
   tina: {
     name: 'Tina Garway',
     image: new URL('/src/img/members/Tina-Garway-Migrationsbeirat.webp', import.meta.url).toString(),
+    ogImage: new URL('/src/img/members/Tina-Garway-Migrationsbeirat.jpg', import.meta.url).toString(),
   },
   matu: {
     name: 'Matu Mbala',
     image: new URL('/src/img/members/Matu-Mbala-Migrationsbeirat.webp', import.meta.url).toString(),
+    ogImage: new URL('/src/img/members/Matu-Mbala-Migrationsbeirat.jpg', import.meta.url).toString(),
   },
   carmen: {
     name: 'Carmen Romano',
     image: new URL('/src/img/members/Carmen-Romano-Migrationsbeirat.webp', import.meta.url).toString(),
+    ogImage: new URL('/src/img/members/Carmen-Romano-Migrationsbeirat.jpg', import.meta.url).toString(),
   },
   bakir: {
     name: 'Bakir Lemes',
     image: new URL('/src/img/members/Bakir-Lemes-Migrationsbeirat.webp', import.meta.url).toString(),
+    ogImage: new URL('/src/img/members/Bakir-Lemes-Migrationsbeirat.jpg', import.meta.url).toString(),
   },
 };
 
@@ -70,9 +77,6 @@ export const membersI18n: MembersI18n = {
             'Sprecherin der Kommission für die Zukunft des Beirats',
           ],
         },
-        // focusOfWork: {
-        //   list: [''],
-        // },
         responsibilities: {
           list: [
             'Cosprecherin zusammen mit Carmen Romano, insbesondere zuständig für die Zusammenarbeit innerhalb des Migrationsbeirats mit der Fraktion, mit anderen progressiven Kräften und auch mit den übrigen Mitgliedern im Beirat.',
@@ -87,7 +91,20 @@ export const membersI18n: MembersI18n = {
         description: '',
       },
       info: {
-        languages: 'Englisch',
+        languages: 'Englisch, Italienisch, Deutsch, Französisch',
+        origin: 'Liberia',
+        functions: {
+          list: [
+            'Sprecherin des Ausschusses für Aufenthalts- und Zuwanderungsrecht mit Rassismus, Diskriminierung und Flüchtlingspolitik und somit Mitglied des Erweiterten Vorstandes',
+            'Beratendes Mitglied des Ausschusses für Soziales, Gesundheit und Frauenangelegenheiten',
+          ],
+        },
+        focusOfWork: {
+          list: [
+            'Vielfaltsorientierte und Diskriminierungskritische Bildungsarbeit / – Organisationsentwicklung',
+            'Empowerment von BIPoC',
+          ],
+        },
       },
     },
     carmen: {
@@ -96,7 +113,20 @@ export const membersI18n: MembersI18n = {
         description: '',
       },
       info: {
-        languages: 'Englisch',
+        languages: 'Italienisch, Deutsch, Englisch, ein bisschen Spanisch',
+        origin: 'Italien',
+        functions: {
+          list: [
+            'Mitglied im Ausschuss für Zuschüssvergaben und Ausschuss 4 (Ausschuss für Aufenthalts- und Zuwanderungsrecht mit Rassismus,Diskriminierung und Flüchtlingspolitik)',
+            'Leiterin der Arbeitsgruppe „Diskriminierung auf dem Wohnungsmarkt“',
+          ],
+        },
+        responsibilities: {
+          list: [
+            'Co-Sprecherin zusammen mit Emily Wachelka, insbesondere zuständig für die Zusammenarbeit außerhalb des Migrationsbeirates mit unterschiedlichen Parteieingliederungen, weitere Migrantischen Organisationen usw.',
+            'Co-Betreuerin der Öffentlichkeitsarbeit der Liste',
+          ],
+        },
       },
     },
     bakir: {
@@ -105,7 +135,17 @@ export const membersI18n: MembersI18n = {
         description: '',
       },
       info: {
-        languages: 'Englisch',
+        about:
+          'Bakir studiert Politikwissenschaften an der TU München. Er arbeitet bei PwC und ist Mitglied des Europäischen Jugendparlaments. Er ist Sprecher des AK für Migration und Flucht der Grünen München und Ortsvertreter der Grünen Jugend München Mitte / West.  Seit 2017 ist München seine Heimat.',
+        languages: 'Bosnisch, Deutsch, Englisch, Hebräisch',
+        origin: 'Bosnien und Herzegowina',
+        functions: {
+          list: [
+            'Stimmberechtigtes Mitglied im Ausschuss für Aufenthalts- und Zuwanderungsrecht mit Rassismus,Diskriminierung und Flüchtlingspolitik',
+            'Beratendes Mitglied im Ausschuss für Arbeit und Wirtschaft, Stadtplanung, Mobilität und Umwelt',
+            'Sowie im Ausschuss für Bildung und Erziehung, Kinder, Jugend und Familie',
+          ],
+        },
       },
     },
     matu: {
@@ -114,7 +154,13 @@ export const membersI18n: MembersI18n = {
         description: '',
       },
       info: {
-        languages: 'Englisch',
+        about:
+          'Matu arbeitet für die Landeshauptstadt München, Sozialreferat, und ist Mitglied im Bezirksausschuss Schwabing West. Stadtplanung, Umwelt, Wirtschaft, Sport und Freizeit sind seine Interessensgebiete.',
+        languages: 'Deutsch, Englisch, Italienisch, Grundkenntnisse Katalanisch',
+        origin: 'Italien',
+        functions: {
+          list: ['Stimmberechtigtes Mitglied im Ausschuss A5 – Arbeit, Wirtschaft, Stadtplanung, Mobilität und Umwelt'],
+        },
       },
     },
   },

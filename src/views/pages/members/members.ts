@@ -13,7 +13,10 @@ export class MembersView extends PageView {
     const data: PageMainData = {
       template,
       page: {
-        head: memberI18n.head,
+        head: {
+          ...memberI18n.head,
+          image: memberBase.ogImage,
+        },
         main: {
           ...memberBase,
           ...memberI18n,

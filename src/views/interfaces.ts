@@ -1,8 +1,10 @@
 import { I18nData, Languages } from '../i18n/interfaces';
 
 export interface PageHead {
-  title: string;
+  title?: string;
   description: string;
+  url?: string;
+  image?: string;
 }
 export interface PageFooter {}
 
