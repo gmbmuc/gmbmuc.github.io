@@ -79,7 +79,7 @@ export const membersI18n: MembersI18n = {
         },
         responsibilities: {
           list: [
-            'Cosprecherin zusammen mit Carmen Romano, insbesondere zuständig für die Zusammenarbeit innerhalb des Migrationsbeirats mit der Fraktion, mit anderen progressiven Kräften und auch mit den übrigen Mitgliedern im Beirat.',
+            'Co-Sprecherin zusammen mit Carmen Romano, insbesondere zuständig für die Zusammenarbeit innerhalb des Migrationsbeirats mit der Fraktion, mit anderen progressiven Kräften und auch mit den übrigen Mitgliedern im Beirat.',
             'Co-Betreuerin der Öffentlichkeitsarbeit der Liste',
           ],
         },

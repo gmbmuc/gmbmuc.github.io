@@ -131,7 +131,9 @@ export class PageView {
 
     document.body.innerHTML = Mustache.render(pageTemplate, page, partials);
     document.body.querySelectorAll('main').forEach((element) => {
-      element.innerHTML = Mustache.render(template, page, partials);
+      const article = document.createElement('article');
+      article.innerHTML = Mustache.render(template, page, partials);
+      element.append(article);
     });
 
     this.applyLayout();
