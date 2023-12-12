@@ -22,6 +22,8 @@ const pages = [
   'impressum',
 ];
 
+copyFileSync(join(__dirname, '../docs/index.html'), join(__dirname, '../docs/404.html'));
+
 pages.forEach((page) => {
   copyIndex(page);
 });
