@@ -23,29 +23,33 @@ body {
   --color-pride-orange: darkorange;
   --color-pride-yellow: #FFED00;
   --color-pride-green: #008026;
+  --color-pride-dark-green: #003d13;
   --color-pride-blue: #24408E;
   --color-pride-purple: #732982;
 
-  --color-bullet: var(--color-pride-yellow);
+  --color: #333333;
+  --bg: #fafafa;
+
   --color-link: var(--color-pride-green);
   --color-link-hover: var(--color-pride-red);
-  --color-link-header: #ffffff;
-  --color-link-header-hover: #ffffff;
+  --color-link-header: var(--bg);
+  --color-link-header-hover: var(--bg);
   --color-link-social: #46962b;
-  --color-link-social-hover: #0a321e;
-  --color-footer: #ffffff;
+  --color-link-social-hover: var(--color-pride-dark-green);
+  --color-footer: var(--bg);
   --color-link-footer: #afdca7;
   --color-link-footer-hover: var(--color-pride-yellow);
   --color-h1: var(--color-pride-green);
-  --color-h2: #000000;
-  --color-h3: #000000;
+  --color-h2: var(--color);
+  --color-h3: var(--color);
+  --color-bullet: var(--color-pride-yellow);
 
   --bg-body: var(--color-pride-green);
-  --bg-main: #ffffff;
+  --bg-main: var(--bg);
   --bg-header: var(--color-pride-green);
-  --bg-header-pinned: #0a321e;
+  --bg-header-pinned: var(--color-pride-dark-green);
   --bg-social: var(--color-pride-yellow);
-  --bg-footer: #0a321e;
+  --bg-footer: var(--color-pride-dark-green);
 
   --font-family: Verdana, sans-serif;
   --font-family-title: Helvetica, sans-serif;
