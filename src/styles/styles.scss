@@ -19,14 +19,32 @@ body {
   display: flex;
   flex-direction: column;
 
+  --color-pride-red: #E40303;
+  --color-pride-orange: darkorange;
+  --color-pride-yellow: #FFED00;
+  --color-pride-green: #008026;
+  --color-pride-blue: #24408E;
+  --color-pride-purple: #732982;
 
-  --color-link: darkolivegreen;
-  --color-link-hover: #e6007e;
+  --color-bullet: var(--color-pride-yellow);
+  --color-link: var(--color-pride-green);
+  --color-link-hover: var(--color-pride-red);
   --color-link-header: #ffffff;
+  --color-link-header-hover: #ffffff;
+  --color-link-social: #46962b;
+  --color-link-social-hover: #0a321e;
+  --color-footer: #ffffff;
+  --color-link-footer: #afdca7;
+  --color-link-footer-hover: var(--color-pride-yellow);
+  --color-h1: var(--color-pride-green);
+  --color-h2: #000000;
+  --color-h3: #000000;
 
-  --bg-main: darkolivegreen;
-  --bg-header: darkolivegreen;
+  --bg-body: var(--color-pride-green);
+  --bg-main: #ffffff;
+  --bg-header: var(--color-pride-green);
   --bg-header-pinned: #0a321e;
+  --bg-social: var(--color-pride-yellow);
   --bg-footer: #0a321e;
 
   --font-family: Verdana, sans-serif;
@@ -42,6 +60,10 @@ body {
   --gap-s: 16px;
   --gap-xs: 8px;
   --gap-xxs: 4px;
+
+  &.pride {
+
+  }
 
   &.tablet {
     --font-size-h1: 24px;
@@ -69,7 +91,7 @@ body {
     --gap-xxs: 2px;
   }
 
-  background-color: var(--bg-main);
+  background-color: var(--bg-body);
   font-family: var(--font-family);
 }
 
@@ -94,7 +116,7 @@ article {
         left: 0;
         margin-top: 3px;
         content: '';
-        background-color: rgba(255, 191, 0, 0.25);
+        background-color: var(--color-bullet);
         background-image: url("/src/img/gruener-migrationsbeirat-muenchen.svg");
         background-size: contain;
       }
@@ -149,7 +171,7 @@ header {
     display: flex;
     gap: var(--gap-s);
     &:hover {
-      color: #ffffff;
+      color: var(--color-link-header-hover);
     }
   }
 
@@ -178,7 +200,8 @@ header {
 }
 
 main {
-  background-color: #fff;
+  color: var(--color);
+  background-color: var(--bg-main);
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   padding: var(--gap-m);
   margin: 0 var(--gap-m) var(--gap-m) var(--gap-m);
@@ -226,10 +249,10 @@ main {
 
 footer {
   background-color: var(--bg-footer);
-  color: #ffffff;
+  color: var(--color-footer);
 
   .social {
-    background-color: #fe0;
+    background-color: var(--bg-social);
     width: 100%;
     margin: 0;
     padding: var(--gap-sm);
@@ -241,7 +264,7 @@ footer {
 
     a {
       font-weight: bold;
-      color: #46962b;
+      color: var(--color-link-social);
 
       padding-left: 26px;
 
@@ -250,7 +273,7 @@ footer {
       background-position: left center;
 
       &:hover {
-        color: #0a321e
+        color: var(--color-link-social-hover);
       }
 
       &.facebook {
@@ -277,34 +300,38 @@ footer {
     }
 
     a {
-      color: #afdca7;
+      font-weight: normal;
+      color: var(--color-link-footer);
       &:hover {
-        color: #ffe000;
+        color: var(--color-link-footer-hover);
       }
     }
   }
 }
 
+h2, h3 {
+  color: var(--color-subtitle);
+}
+
 h1 {
   margin-top: 0;
   font-family: var(--font-family-title);
+  font-size: var(--font-size-h1);
+  color: var(--color-h1);
 
   .mobile &, .tablet & {
     text-align: center;
   }
 }
 
-h1 {
-  color: var(--color-link);
-  font-size: var(--font-size-h1);
-}
-
 h2 {
   font-size: var(--font-size-h2);
+  color: var(--color-h2);
 }
 
 h3 {
   font-size: var(--font-size-h3);
+  color: var(--color-h3);
 }
 
 h2, h3 {
