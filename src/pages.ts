@@ -77,14 +77,14 @@ const pages: Page[] = [
   {
     path: 'person/emily-wachelka',
     og: {
-      image: 'members/Emily-Wachelka-Migrationsbeirat.jpg',
+      image: 'img/members/Emily-Wachelka-Migrationsbeirat.jpg',
       title: `Emily Wachelka :: ${titleDeDe}`,
     },
   },
   {
     path: 'en/person/emily-wachelka',
     og: {
-      image: 'members/Emily-Wachelka-Migrationsbeirat.jpg',
+      image: 'img/members/Emily-Wachelka-Migrationsbeirat.jpg',
       title: `Emily Wachelka :: ${titleEnUs}`,
     },
   },
