@@ -434,6 +434,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/optimizer-data-url@npm:^2.10.3":
+  version: 2.10.3
+  resolution: "@parcel/optimizer-data-url@npm:2.10.3"
+  dependencies:
+    "@parcel/plugin": "npm:2.10.3"
+    "@parcel/utils": "npm:2.10.3"
+    isbinaryfile: "npm:^4.0.2"
+    mime: "npm:^2.4.4"
+  checksum: 1e5ce9d983877a00e346756112a55a90a457779df213d04aedd53625e2017d7b3dc56832319a1ca032d136bd4fc3904d71584daa3c1b0e6b41617736b053acd0
+  languageName: node
+  linkType: hard
+
 "@parcel/optimizer-htmlnano@npm:2.10.3":
   version: 2.10.3
   resolution: "@parcel/optimizer-htmlnano@npm:2.10.3"
@@ -1968,6 +1980,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gruennaher-migrations-beirat.de@workspace:."
   dependencies:
+    "@parcel/optimizer-data-url": "npm:^2.10.3"
     "@parcel/packager-raw-url": "npm:2.10.3"
     "@parcel/transformer-inline-string": "npm:2.10.3"
     "@parcel/transformer-sass": "npm:2.10.3"
@@ -2178,6 +2191,13 @@ __metadata:
   version: 7.0.0
   resolution: "is-number@npm:7.0.0"
   checksum: b4686d0d3053146095ccd45346461bc8e53b80aeb7671cc52a4de02dbbf7dc0d1d2a986e2fe4ae206984b4d34ef37e8b795ebc4f4295c978373e6575e295d811
+  languageName: node
+  linkType: hard
+
+"isbinaryfile@npm:^4.0.2":
+  version: 4.0.10
+  resolution: "isbinaryfile@npm:4.0.10"
+  checksum: 0703d8cfeb69ed79e6d173120f327450011a066755150a6bbf97ffecec1069a5f2092777868315b21359098c84b54984871cad1abce877ad9141fb2caf3dcabf
   languageName: node
   linkType: hard
 
@@ -2440,6 +2460,15 @@ __metadata:
     braces: "npm:^3.0.2"
     picomatch: "npm:^2.3.1"
   checksum: 3d6505b20f9fa804af5d8c596cb1c5e475b9b0cd05f652c5b56141cf941bd72adaeb7a436fda344235cef93a7f29b7472efc779fcdb83b478eab0867b95cdeff
+  languageName: node
+  linkType: hard
+
+"mime@npm:^2.4.4":
+  version: 2.6.0
+  resolution: "mime@npm:2.6.0"
+  bin:
+    mime: cli.js
+  checksum: a7f2589900d9c16e3bdf7672d16a6274df903da958c1643c9c45771f0478f3846dcb1097f31eb9178452570271361e2149310931ec705c037210fc69639c8e6c
   languageName: node
   linkType: hard
 

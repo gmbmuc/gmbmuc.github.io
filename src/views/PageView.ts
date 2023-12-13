@@ -18,7 +18,7 @@ export class PageView {
         header: {},
         footer: {},
         images: {
-          logo: new URL('/src/img/gruener-migrationsbeirat-muenchen.png', import.meta.url).toString(),
+          logo: new URL('/src/img/gruener-migrationsbeirat-muenchen.webp', import.meta.url).toString(),
         },
         links: {
           instagram: 'https://instagram.com/gruennahes_vielfaltsbuendnis?igshid=NGVhN2U2NjQ0Yg==',
