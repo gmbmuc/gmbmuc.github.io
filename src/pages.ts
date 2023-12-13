@@ -32,7 +32,8 @@ const copyIndex = (page: Page) => {
   const indexFile = join(__dirname, '../docs/index.html');
   let indexFileContent = readFileSync(indexFile, 'utf8');
 
-  const baseUrl = 'https://gruener-migrationsbeirat-muenchen.de';
+  // const baseUrl = 'https://gruener-migrationsbeirat-muenchen.de';
+  const baseUrl = 'https://gmbmuc.github.io';
 
   indexFileContent = indexFileContent.replace(new RegExp('"og_title"', 'g'), `"${page.og.title}"`);
   indexFileContent = indexFileContent.replace(
