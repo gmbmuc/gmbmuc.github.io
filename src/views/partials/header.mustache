@@ -4,5 +4,12 @@
       <img class="logo" src="{{images.logo}}" alt="Logo" />
       <span class="title">{{i18n.title}}</span>
     </a>
+    <div class="actions">
+      <select class="language">
+        {{#header.languages}}
+          <option value="{{value}}"{{#selected}} selected{{/selected}}>{{label}}</option>
+        {{/header.languages}}
+      </select>
+    </div>
   </div>
 </header>

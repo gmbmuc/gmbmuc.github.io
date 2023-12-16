@@ -10,12 +10,19 @@ export class PageView {
   private data: PageData;
 
   constructor(data: PageMainData) {
+    const language = getLanguage();
+
     this.data = {
       template: data.template,
       page: {
         head: data.page.head,
         main: data.page.main,
-        header: {},
+        header: {
+          languages: [
+            { value: 'de', label: 'Deutsch', selected: language.startsWith('de') },
+            { value: 'en', label: 'English', selected: language.startsWith('en') },
+          ],
+        },
         footer: {},
         images: {
           logo: new URL('/src/img/gruener-migrationsbeirat-muenchen.webp', import.meta.url).toString(),
@@ -71,6 +78,19 @@ export class PageView {
       },
       { passive: true },
     );
+  }
+
+  attachEvents() {
+    document.querySelectorAll('select.language').forEach((select) => {
+      (select as HTMLSelectElement).addEventListener('change', (event) => {
+        const { value: lanaguege } = event.target as HTMLSelectElement;
+        const translation = document.location.pathname.replace(
+          /^\/(|de|en|it)$/,
+          `/${lanaguege === 'de' ? '' : lanaguege}`,
+        );
+        document.location.href = translation.replace(/^\/(de|en|it)\//, `/${lanaguege === 'de' ? '' : lanaguege}/`);
+      });
+    });
   }
 
   getLanguage() {
@@ -139,5 +159,6 @@ export class PageView {
     this.applyLayout();
     this.attachListeners();
     this.attachObservers();
+    this.attachEvents();
   }
 }

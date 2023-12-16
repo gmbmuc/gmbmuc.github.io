@@ -97,6 +97,33 @@ body {
   font-family: var(--font-family);
 }
 
+select {
+  appearance: none;
+  background-color: transparent;
+  padding: var(--gap-xs);
+  border: 1px solid var(--color-link-header);
+  padding-right: 36px;
+  border-radius: var(--gap-xxs);
+  color: var(--color-link-header);
+
+  background-image: url("/src/img/language.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: right var(--gap-xxs) center;
+
+  .tablet &, .mobile &, .xs & {
+    background-position: center center;
+    width: 48px;
+    height: 48px;
+    background-size: 36px 36px;
+    border: none;
+    color: transparent;
+  }
+
+  option {
+  }
+}
+
 ul.list {
   list-style: none;
   margin-left: 0;
@@ -183,11 +210,16 @@ header {
   justify-content: center;
   transition: background-color 0.5s;
 
-
   .content {
     width: 100%;
     max-width: 1280px;
     padding: 0 var(--gap-s);
+    display: flex;
+    align-items: center;
+
+    .actions {
+      flex-shrink: 1;
+    }
   }
 
   &.pinned {
@@ -198,6 +230,7 @@ header {
   a {
     color: var(--color-link-header);
     display: flex;
+    flex-grow: 1;
     gap: var(--gap-s);
     &:hover {
       color: var(--color-link-header-hover);

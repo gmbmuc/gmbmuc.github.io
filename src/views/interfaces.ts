@@ -8,7 +8,9 @@ export interface PageHead {
 }
 export interface PageFooter {}
 
-export interface PageHeader {}
+export interface PageHeader {
+  languages: { value: string; label: string; selected: boolean }[];
+}
 export interface PageHeader {}
 export interface PageImages {
   logo: string;
